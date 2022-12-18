@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">Weather Forecaster</string>
+    <string name="Weather_Forecast">Weather Forecast</string>
+    <string name="no">no</string>
+    <string name="hint">Search for a place</string>
+    <string name="edit_list">Edit List</string>
+    <string name="celsius">Celsius</string>
+    <string name="fahrenheit">Fahrenheit</string>
+    <string name="about">About Us</string>
+    <string name="report_an_issue">Report an Issue</string>
+    <string name="exit">Exit</string>
+    <string name="dropdown_img">dropdown_img</string>
+    <string name="place_name">place_name</string>
+    <string name="temperature">temperature°</string>
+    <string name="condition">condition</string>
+    <string name="l_low_temp">L : low_temp</string>
+    <string name="h_high_temp">H : high_temp</string>
+    <string name="aqi">aqi</string>
+    <string name="air_quality">Air Quality</string>
+    <string name="aqi_description">Value - Condition</string>
+    <string name="aqi_content"> Air quality index is Value, which is similar to yesterday
+                                at about this time. </string>
+    <string name="know_more"> <a href="https://en.wikipedia.org/wiki/Air_quality_index">Know More
+        </a> </string>
+    <string name="weekly_forecast">Weekly Forecast</string>
+    <string name="sunday">Sun</string>
+    <string name="saturday">Sat</string>
+    <string name="friday">Fri</string>
+    <string name="thursday">Thu</string>
+    <string name="wednesday">Wed</string>
+    <string name="tuesday">Tue</string>
+    <string name="monday">Mon</string>
+    <string name="uv_index">UV Index</string>
+    <string name="uv_index_numvalue">numvalue\nvalue</string>
+    <string name="sunrise">Sunrise</string>
+    <string name="sunrise_time">Sunrise Time</string>
+    <string name="sunset">Sunset</string>
+    <string name="sunset_time">Sunset Time</string>
+    <string name="wind">Wind</string>
+    <string name="wind_attributes">Speed : </string>
+    <string name="precipitation">Precipitation</string>
+    <string name="precipitation_value">\t\t\tprecipitation_value mm \n\t\t\t\t\t\tin last 24 hours</string>
+    <string name="humidity">Humidity</string>
+    <string name="visibility">Visibility</string>
+    <string name="visibility_value">visibility_value km</string>
+    <string name="city_name">City Name</string>
+    <string name="time">Time</string>
+    <string name="weather_condition">Weather Condition</string>
+    <string name="temperature_value">Temperature Value</string>
+    <string name="ht_lt_value">H : HT Value\t\t L : LT Value</string>
+    <string name="weather_app_logo">Weather App</string>
+    <string name="about_me">Developer :</string>
+    <string name="contact_at">Contact At :</string>
+    <string name="mobile_no">8950158635</string>
+    <string name="email">rahulmanga2155</string>
+    <string name="developer_name">Rahul \n\tMangla</string>
+    <string name="wind_direction">Direction :</string>
+    <string name="humidity_description">humidity_value %\nThe dew point is dew_point value.</string>
+
+
+</resources>

@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:id="@+id/place_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="168dp"
+        android:layout_marginBottom="680dp"
+        android:fontFamily="@font/vampiro_one"
+        android:text="@string/place_name"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/temperature_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="176dp"
+        android:autofillHints="0"
+        android:fontFamily="casual"
+        android:inputType="number"
+        android:text="@string/temperature"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/place_name" />
+
+    <TextView
+        android:id="@+id/weather_condition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="176dp"
+        android:fontFamily="@font/vampiro_one"
+        android:text="@string/condition"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/temperature_value" />
+
+    <TextView
+        android:id="@+id/max_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="561dp"
+        android:fontFamily="@font/acme"
+        android:text="@string/h_high_temp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/min_temp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weather_condition"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/min_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="140dp"
+        android:fontFamily="@font/acme"
+        android:text="@string/l_low_temp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/max_temp"
+        app:layout_constraintTop_toBottomOf="@+id/weather_condition" />
+
+    <!-- A CardView that contains a TextView -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_air_quality"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="184dp"
+        android:layout_marginEnd="20dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_gravity="top|start"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:contentDescription="@string/aqi"
+            app:srcCompat="@drawable/air_quality" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="4dp"
+            android:paddingTop="4dp"
+            android:text="@string/air_quality" />
+
+        <TextView
+            android:id="@+id/aqi_value"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="34dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/aqi_description" />
+
+        <TextView
+            android:id="@+id/aqi_des"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="58dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/aqi_content" />
+
+        <SeekBar
+            android:id="@+id/Range"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:valueFrom="0.0"
+            android:valueTo="400.0"
+            android:value="value" />
+
+        <TextView
+            android:id="@+id/know_more"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:text="@string/know_more"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_weekly_forecast"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_view_air_quality">
+
+        <ImageView
+            android:id="@+id/calender"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="top|start"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:contentDescription="@string/aqi"
+            app:srcCompat="@drawable/calender"
+            />
+
+        <TextView
+            android:id="@+id/Weekly_Forecast"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_gravity="start"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="4dp"
+            android:paddingTop="4dp"
+            android:text="@string/weekly_forecast"/>
+
+        <TextView
+            android:id="@+id/Monday"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:layout_marginTop="34dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:text="@string/monday" />
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            app:srcCompat="@drawable/sun"
+            android:layout_marginTop="38dp"
+            android:layout_marginStart="80dp"/>
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="38dp"
+            android:layout_marginStart="140dp"/>
+
+        <SeekBar
+            android:layout_width="140dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="38dp"
+            android:layout_marginStart="160dp"/>
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="38dp"
+            android:layout_marginStart="295dp"/>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white"
+            android:layout_marginTop="52dp"/>
+
+        <TextView
+            android:id="@+id/Tuesday"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:layout_marginTop="55dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:text="@string/tuesday"/>
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            app:srcCompat="@drawable/sun"
+            android:layout_marginTop="58dp"
+            android:layout_marginStart="80dp"/>
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="58dp"
+            android:layout_marginStart="140dp"/>
+
+        <SeekBar
+            android:layout_width="140dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="58dp"
+            android:layout_marginStart="160dp"/>
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="58dp"
+            android:layout_marginStart="295dp"/>
+
+        <View
+            android:id="@+id/divider_2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white"
+            android:layout_marginTop="73dp"/>
+
+        <TextView
+            android:id="@+id/Wednesday"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:layout_marginTop="75dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:text="@string/wednesday"/>
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            app:srcCompat="@drawable/sun"
+            android:layout_marginTop="78dp"
+            android:layout_marginStart="80dp"/>
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="78dp"
+            android:layout_marginStart="140dp"/>
+
+        <SeekBar
+            android:layout_width="140dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="78dp"
+            android:layout_marginStart="160dp"/>
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="78dp"
+            android:layout_marginStart="295dp"/>
+
+        <View
+            android:id="@+id/divider_3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white"
+            android:layout_marginTop="93dp"/>
+
+        <TextView
+            android:id="@+id/Thursday"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:layout_marginTop="95dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:text="@string/thursday"/>
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            app:srcCompat="@drawable/sun"
+            android:layout_marginTop="98dp"
+            android:layout_marginStart="80dp"/>
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="98dp"
+            android:layout_marginStart="140dp"/>
+
+        <SeekBar
+            android:layout_width="140dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="98dp"
+            android:layout_marginStart="160dp"/>
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="98dp"
+            android:layout_marginStart="295dp"/>
+
+        <View
+            android:id="@+id/divider_4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white"
+            android:layout_marginTop="113dp"/>
+
+        <TextView
+            android:id="@+id/Friday"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:layout_marginTop="115dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:text="@string/friday"/>
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            app:srcCompat="@drawable/sun"
+            android:layout_marginTop="118dp"
+            android:layout_marginStart="80dp"/>
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="118dp"
+            android:layout_marginStart="140dp"/>
+
+        <SeekBar
+            android:layout_width="140dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="118dp"
+            android:layout_marginStart="160dp"/>
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="118dp"
+            android:layout_marginStart="295dp"/>
+
+        <View
+            android:id="@+id/divider_5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white"
+            android:layout_marginTop="133dp"/>
+
+        <TextView
+            android:id="@+id/Saturday"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:layout_marginTop="135dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:text="@string/saturday"/>
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            app:srcCompat="@drawable/sun"
+            android:layout_marginTop="138dp"
+            android:layout_marginStart="80dp"/>
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="138dp"
+            android:layout_marginStart="140dp"/>
+
+        <SeekBar
+            android:layout_width="140dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="138dp"
+            android:layout_marginStart="160dp"/>
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="138dp"
+            android:layout_marginStart="295dp"/>
+
+        <View
+            android:id="@+id/divider_6"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white"
+            android:layout_marginTop="153dp"/>
+
+        <TextView
+            android:id="@+id/Sunday"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:layout_marginTop="155dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:text="@string/sunday" />
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            app:srcCompat="@drawable/sun"
+            android:layout_marginTop="158dp"
+            android:layout_marginStart="80dp"/>
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="158dp"
+            android:layout_marginStart="140dp"/>
+
+        <SeekBar
+            android:layout_width="140dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="158dp"
+            android:layout_marginStart="160dp"/>
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="158dp"
+            android:layout_marginStart="295dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_uv_index"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="210dp"
+        android:layout_marginTop="6dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_view_weekly_forecast">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            app:srcCompat="@drawable/uv_index"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/uv_index"/>
+
+        <TextView
+            android:id="@+id/uv_index"
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:layout_marginTop="22dp"
+            android:textSize="11sp"
+            android:layout_marginStart="4dp"
+            android:text="@string/uv_index_numvalue"/>
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginStart="54dp"
+            android:layout_marginEnd="4dp"
+            android:layout_gravity="end"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_sunrise"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="210dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="6dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_view_weekly_forecast">
+
+        <TextView
+            android:layout_width="84dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="4dp"
+            android:text="@string/sunrise" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginStart="6dp"
+            app:srcCompat="@drawable/sunrise"/>
+
+        <TextView
+            android:id="@+id/sunrise"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="21.6dp"
+            android:text="@string/sunrise_time"/>
+
+        <TextView
+            android:id="@+id/sunset"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="94dp"
+            android:layout_marginEnd="4dp"
+            android:text="@string/sunset"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:srcCompat="@drawable/sunset"
+            android:layout_marginTop="22dp"
+            android:layout_marginStart="98dp"/>
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="21.6dp"
+            android:layout_marginStart="124dp"
+            android:text="@string/sunset_time"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_wind"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="210dp"
+        android:layout_marginTop="6dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_view_uv_index">
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        app:srcCompat="@drawable/wind"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:text="@string/wind"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="30dp"/>
+
+        <TextView
+            android:id="@+id/wind_speed"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:layout_marginTop="20dp"
+            android:textSize="11sp"
+            android:layout_marginStart="6dp"
+            android:text="@string/wind_attributes" />
+
+        <TextView
+            android:id="@+id/wind_direction"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:layout_marginTop="36dp"
+            android:textSize="11sp"
+            android:layout_marginStart="6dp"
+            android:text="@string/wind_direction" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_precipitation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="210dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="6dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_view_sunrise">
+
+    <ImageView
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        app:srcCompat="@drawable/precipitation"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:text="@string/precipitation"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="4dp"/>
+
+    <TextView
+        android:id="@+id/precipitation_value"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_marginTop="24dp"
+        android:textSize="10sp"
+        android:text="@string/precipitation_value"/>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_humidity"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="210dp"
+        android:layout_marginTop="6dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_view_wind">
+
+    <ImageView
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="4dp"
+        app:srcCompat="@drawable/humidity"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="26dp"
+        android:text="@string/humidity"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/humidity_value"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="4dp"
+        android:textSize="8sp"
+        android:text="@string/humidity_description"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_visibility"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="210dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="6dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_view_precipitation">
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="4dp"
+        app:srcCompat="@drawable/visibility"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="30dp"
+        android:text="@string/visibility"/>
+
+    <TextView
+        android:id="@+id/visibility"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="26dp"
+        android:text="@string/visibility_value"/>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

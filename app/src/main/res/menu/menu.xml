@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+            <item
+                android:id="@+id/edit_list"
+                android:icon="@drawable/edit_list"
+                android:title="@string/edit_list" />
+            <item
+                android:id="@+id/celsius"
+                android:icon="@drawable/degree_celsius"
+                android:title="@string/celsius" />
+            <item
+                android:id="@+id/fahrenheit"
+                android:icon="@drawable/degree_fahrenheit"
+                android:title="@string/fahrenheit" />
+            <item
+                android:id="@+id/about"
+                android:icon="@drawable/about_us"
+                android:title="@string/about" />
+            <item
+                android:id="@+id/report_an_issue"
+                android:icon="@drawable/report_an_issue"
+                android:title="@string/report_an_issue" />
+            <item
+                android:id="@+id/exit"
+                android:icon="@drawable/exit"
+                android:title="@string/exit" />
+</menu>
