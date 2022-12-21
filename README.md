@@ -5,7 +5,7 @@ It uses REST Api to fetch the data in the form of raw JSON and then displays it 
 
 _**You can install preview application from here**_
 
-[![Weather App](https://img.shields.io/badge/Weather%20App-v1.0.0-brightgreen)]()
+[![Weather App](https://img.shields.io/badge/Weather%20App-v1.0.0-brightgreen)](https://github.com/rahulmangla28/Weather_App/releases/tag/weather-app.debug)
 
 ## 📜 Contents
 
