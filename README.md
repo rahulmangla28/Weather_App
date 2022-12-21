@@ -26,6 +26,10 @@ _**You can install preview application from here**_
 
 ## 📸 Screenshots
 
+Splash Screen | Requesting Permission | Weather Details
+--- | --- | --- |
+<img src="https://github.com/rahulmangla28/Weather_App/blob/master/animation/screenshot_1.jpeg" height="600" width="500" > | <img src="https://github.com/rahulmangla28/Weather_App/blob/master/animation/screenshot_2.jpeg" height="600" width="500" > | <img src="https://github.com/rahulmangla28/Weather_App/blob/master/animation/screenshot_3.jpeg" height="600" width="500" >
+
 ## 🔤 Languages Used
 
 1. [Kotlin](https://kotlinlang.org/docs/home.html) : First class and official programming language for Android development.
