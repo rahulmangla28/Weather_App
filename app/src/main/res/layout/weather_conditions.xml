@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:background="#FFFFFF">
 
     <TextView
@@ -498,35 +505,29 @@
         app:layout_constraintTop_toBottomOf="@+id/card_view_weekly_forecast">
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
             android:layout_marginStart="4dp"
             android:layout_marginTop="4dp"
-            app:srcCompat="@drawable/uv_index"/>
+            app:srcCompat="@drawable/sunrise"/>
 
         <TextView
+            android:id="@+id/sunrise"
             android:layout_width="match_parent"
             android:layout_height="20dp"
             android:layout_marginStart="28dp"
             android:layout_marginTop="4dp"
-            android:text="@string/uv_index"/>
+            android:textSize="14dp"
+            android:text="@string/sunrise"/>
 
         <TextView
-            android:id="@+id/uv_index"
+            android:id="@+id/sunrise_time"
             android:layout_width="match_parent"
-            android:layout_height="26dp"
-            android:layout_marginTop="22dp"
-            android:textSize="11sp"
-            android:layout_marginStart="4dp"
-            android:text="@string/uv_index_numvalue"/>
-
-        <SeekBar
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
-            android:layout_marginStart="54dp"
-            android:layout_marginEnd="4dp"
-            android:layout_gravity="end"/>
+            android:layout_height="20dp"
+            android:layout_marginTop="26dp"
+            android:textSize="16sp"
+            android:layout_marginStart="6dp"
+            android:text="@string/sunrise_time"/>
 
     </androidx.cardview.widget.CardView>
 
@@ -543,47 +544,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/card_view_weekly_forecast">
 
-        <TextView
-            android:layout_width="84dp"
-            android:layout_height="match_parent"
-            android:layout_marginStart="4dp"
-            android:text="@string/sunrise" />
-
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginTop="22dp"
-            android:layout_marginStart="6dp"
-            app:srcCompat="@drawable/sunrise"/>
-
-        <TextView
-            android:id="@+id/sunrise"
-            android:layout_width="40dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="36dp"
-            android:layout_marginTop="21.6dp"
-            android:text="@string/sunrise_time"/>
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            app:srcCompat="@drawable/sunset"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="4dp"/>
 
         <TextView
             android:id="@+id/sunset"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="94dp"
-            android:layout_marginEnd="4dp"
-            android:text="@string/sunset"/>
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            app:srcCompat="@drawable/sunset"
-            android:layout_marginTop="22dp"
-            android:layout_marginStart="98dp"/>
+            android:layout_height="22dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="4dp"
+            android:textSize="16sp"
+            android:text="@string/sunset" />
 
         <TextView
-            android:layout_width="40dp"
+            android:layout_width="match_parent"
             android:layout_height="20dp"
-            android:layout_marginTop="21.6dp"
-            android:layout_marginStart="124dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginStart="6dp"
+            android:textSize="16sp"
             android:text="@string/sunset_time"/>
 
     </androidx.cardview.widget.CardView>
@@ -601,20 +583,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/card_view_uv_index">
 
-    <ImageView
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
-        app:srcCompat="@drawable/wind"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            app:srcCompat="@drawable/wind"/>
 
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:text="@string/wind"
-        android:layout_marginTop="4dp"
-        android:layout_marginStart="30dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="@string/wind"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="30dp"/>
 
         <TextView
             android:id="@+id/wind_speed"
@@ -649,27 +631,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/card_view_sunrise">
 
-    <ImageView
-        android:layout_width="16dp"
-        android:layout_height="16dp"
-        app:srcCompat="@drawable/precipitation"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"/>
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            app:srcCompat="@drawable/precipitation"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="16dp"
-        android:text="@string/precipitation"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="4dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:text="@string/precipitation"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="4dp"/>
 
-    <TextView
-        android:id="@+id/precipitation_value"
-        android:layout_width="match_parent"
-        android:layout_height="24dp"
-        android:layout_marginTop="24dp"
-        android:textSize="10sp"
-        android:text="@string/precipitation_value"/>
+        <TextView
+            android:id="@+id/precipitation_value"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_marginTop="24dp"
+            android:textSize="10sp"
+            android:text="@string/precipitation_value"/>
 
 
     </androidx.cardview.widget.CardView>
@@ -687,29 +669,38 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/card_view_wind">
 
-    <ImageView
-        android:layout_width="16dp"
-        android:layout_height="16dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginStart="4dp"
-        app:srcCompat="@drawable/humidity"/>
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="4dp"
+            app:srcCompat="@drawable/humidity"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="16dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginStart="26dp"
-        android:text="@string/humidity"
-        android:textSize="12sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="26dp"
+            android:text="@string/humidity"
+            android:textSize="12sp"/>
 
-    <TextView
-        android:id="@+id/humidity_value"
-        android:layout_width="match_parent"
-        android:layout_height="24dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginStart="4dp"
-        android:textSize="8sp"
-        android:text="@string/humidity_description"/>
+        <TextView
+            android:id="@+id/humidity_value"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="4dp"
+            android:textSize="8sp"
+            android:text="@string/humidity_description"/>
+
+        <TextView
+            android:id="@+id/dew_point"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginStart="4dp"
+            android:textSize="8sp"
+            android:text="@string/dew_point"/>
 
     </androidx.cardview.widget.CardView>
 
@@ -726,28 +717,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/card_view_precipitation">
 
-    <ImageView
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginStart="4dp"
-        app:srcCompat="@drawable/visibility"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="4dp"
+            app:srcCompat="@drawable/visibility"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginStart="30dp"
-        android:text="@string/visibility"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="30dp"
+            android:text="@string/visibility"/>
 
-    <TextView
-        android:id="@+id/visibility"
-        android:layout_width="match_parent"
-        android:layout_height="24dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="26dp"
-        android:text="@string/visibility_value"/>
+        <TextView
+            android:id="@+id/visibility"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="26dp"
+            android:text="@string/visibility_value"/>
 
     </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

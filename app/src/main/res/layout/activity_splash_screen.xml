@@ -9,6 +9,7 @@
     android:padding="5dp"
     tools:context=".SplashScreen">
 
+<!-- Weather app logo -->
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
@@ -21,6 +22,7 @@
         tools:layout_editor_absoluteX="-5dp"
         android:foregroundGravity="center_vertical"/>
 
+<!-- Weather App title-->
     <TextView
         android:id="@+id/logo_text"
         android:layout_width="match_parent"
@@ -38,20 +40,24 @@
         app:layout_constraintVertical_bias="0.603"
         tools:layout_editor_absoluteX="0dp" />
 
+<!-- Developer Details-->
     <TextView
         android:id="@+id/developer_details"
         android:layout_width="wrap_content"
-        android:layout_height="20dp"
+        android:layout_height="30dp"
         android:layout_marginStart="8dp"
-        android:layout_marginBottom="44dp"
+        android:layout_marginBottom="60dp"
         android:text="@string/about_me"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:layout_marginBottom="10dp"
         android:src="@drawable/developer"
@@ -60,27 +66,33 @@
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginBottom="10dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="12dp"
         android:text="@string/developer_name"
-        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView3" />
 
+<!-- Contact Details-->
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:layout_marginEnd="68dp"
-        android:layout_marginBottom="44dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="60dp"
         android:text="@string/contact_at"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+<!-- Mobile number-->
     <ImageView
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginEnd="6dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="2dp"
         android:src="@drawable/phone"
         app:layout_constraintBottom_toTopOf="@+id/imageView4"
@@ -90,16 +102,19 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="20dp"
-        android:layout_marginEnd="34dp"
-        android:layout_marginBottom="2dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/mobile_no"
+        android:textColor="@color/black"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/textView7"
         app:layout_constraintEnd_toEndOf="parent" />
 
+<!-- Email address-->
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_marginEnd="6dp"
         android:src="@drawable/email"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -110,7 +125,10 @@
         android:layout_width="wrap_content"
         android:layout_height="20dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
         android:text="@string/email"
+        android:textColor="@color/black"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

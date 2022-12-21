@@ -17,7 +17,7 @@
     <string name="h_high_temp">H : high_temp</string>
     <string name="aqi">aqi</string>
     <string name="air_quality">Air Quality</string>
-    <string name="aqi_description">Value - Condition</string>
+    <string name="aqi_description">Condition</string>
     <string name="aqi_content"> Air quality index is Value, which is similar to yesterday
                                 at about this time. </string>
     <string name="know_more"> <a href="https://en.wikipedia.org/wiki/Air_quality_index">Know More
@@ -39,7 +39,7 @@
     <string name="wind">Wind</string>
     <string name="wind_attributes">Speed : </string>
     <string name="precipitation">Precipitation</string>
-    <string name="precipitation_value">\t\t\tprecipitation_value mm \n\t\t\t\t\t\tin last 24 hours</string>
+    <string name="precipitation_value">\t\t\tprecipitation_value mm \n\t\t\t\t\tin last 24 hours</string>
     <string name="humidity">Humidity</string>
     <string name="visibility">Visibility</string>
     <string name="visibility_value">visibility_value km</string>
@@ -55,7 +55,11 @@
     <string name="email">rahulmanga2155</string>
     <string name="developer_name">Rahul \n\tMangla</string>
     <string name="wind_direction">Direction :</string>
-    <string name="humidity_description">humidity_value %\nThe dew point is dew_point value.</string>
+    <string name="humidity_description">humidity_value</string>
+    <string name="dew_point">The dew point is dew_point value</string>
+    <string name="search_for_a_place">Search for a place</string>
+    <string name="cloudiness">Clouds</string>
+    <string name="cloudiness_value">Value</string>
 
 
 </resources>

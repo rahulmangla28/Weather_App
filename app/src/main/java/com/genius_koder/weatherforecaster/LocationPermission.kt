@@ -34,11 +34,6 @@ class LocationPermission : AppCompatActivity() {
         // looper is needed due to some bugs in handler(as it is deprecated).
         // looper runs on main thread.
         // runner is executed via lopper.
-        Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this,MainActivity::class.java)   // runner content
-            startActivity(intent)                                             // runner content
-            finish()                                                          // runner content
-        },5000)
 
         mfusedlocation = LocationServices.getFusedLocationProviderClient(this)
 
@@ -62,7 +57,7 @@ class LocationPermission : AppCompatActivity() {
                             intent.putExtra("long",location.longitude.toString())
                             startActivity(intent)
                             finish()
-                        },2000)
+                        },0)
                     }
                 }
             }else{
