@@ -9,21 +9,16 @@ _**You can install preview application from here**_
 
 ## 📜 Contents
 
-* [Android Concepts Used]()
-* [Networking Libraries Used]()
-* [Screenshots]()
-* [Languages Used]()
-* [App Permissions]()
-* [UI]()
-* [Coding Style]()
-* [Future Enhancements]()
+* [Android Concepts Used](https://github.com/rahulmangla28/Weather_App/tree/master#-android-concepts-used)
+* [Networking Libraries Used](https://github.com/rahulmangla28/Weather_App/tree/master#-networking-libraries-used)
+* [Screenshots](https://github.com/rahulmangla28/Weather_App/tree/master#-screenshots)
+* [Languages Used](https://github.com/rahulmangla28/Weather_App/tree/master#-languages-used)
+* [App Permissions](https://github.com/rahulmangla28/Weather_App/tree/master#-app-permissions)
+* [UI](https://github.com/rahulmangla28/Weather_App/tree/master#-ui)
+* [Coding Style](https://github.com/rahulmangla28/Weather_App/tree/master#-coding-style)
+* [Future Enhancements](https://github.com/rahulmangla28/Weather_App/tree/master#-future-enhancements)
 
 ## 📑 Android Concepts Used
-
-1.
-2.
-3.
-4.
 
 ## 📋 Networking Libraries Used
 
